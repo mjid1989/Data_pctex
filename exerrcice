@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper]{article} %,landscape,twocolumn
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary {circuits.ee.IEC}
+\usepackage{pgf}
+\usepackage{bm}
+\usepackage{pstricks}
+\let\clipbox\relax
+\usepackage{caption}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{lastpage}
+\usepackage{setspace}
+\usepackage{graphicx} %table
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,includehead]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\setmainfont{???}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{varwidth}
+\usepackage{fancyhdr} % Mise en page, en-tête et pied de page
+\usepackage[a4,frame,center]{crop}
+%\renewcommand{\figurename}{Fig.}
+\setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
+\setotherlanguage{french}
+%\fontspec [Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/public/lm/,
+%	UprightFont = lmsans10-Regular.otf,
+%    BoldFont = OpenSans-Bold.otf,
+%    ItalicFont = lmsans10-Italic.otf
+% ]
+%{lmsans10-regular.otf}
+
+%\setmainfont[Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/%public/lm/]{lmsans10-regular.otf}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
+\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
+%\newfontfamily\arabicfont[Script=Arabic,Scale=1]{/Users/mjid/Documents/maketex/arial1/arial.ttf}
+%\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arialbd.ttf}
+\author{نايت الياس}
+\newtcbtheorem[auto counter]{exercice}%
+		{\textbf{تمرين}}{enhanced jigsaw,breakable,fonttitle=\bfseries\upshape,
+			arc=0mm, colback=white!5!white,colframe=blue!50!white}{theorem}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\pagestyle{fancy}
+\rfoot{\textsl{\footnotesize{Année \number\count1/\number\count2}}}
+\lfoot{السنة الدراسية : }
+\cfoot{\footnotesize{صفحة 
+\pageref{LastPage}/\thepage}}
+\lhead{\footnotesize{ذ.}}
+\chead{
+سلسلة التمارين
+}
+\definecolor{color1}{RGB}{250,250,190}
+\pagecolor{color1}
+
+\newtcolorbox[blend into=figures]{myfigure}[2][]{float=htb,capture=hbox,
+title={#2},every float=\centering,#1}
+%================================================style 3 =============================================
+% \usepackage{varwidth}
+\newtcolorbox[auto counter]{mybox}[2][]{enhanced,
+attach boxed title to top right={xshift=-1cm,yshift=-3mm},
+fonttitle=\bfseries,varwidth boxed title=0.7\linewidth,
+colbacktitle=green!45!white,coltitle=green!10!black,colframe=green!50!black,
+interior style={top color=yellow!10!white,bottom color=green!10!white},
+boxed title style={boxrule=0.75mm,colframe=white,
+borderline={0.1mm}{0mm}{green!50!black},
+borderline={0.1mm}{0.75mm}{green!50!black},
+interior style={top color=green!10!white,bottom color=green!10!white,
+middle color=green!50!white},
+drop fuzzy shadow},
+title={#2},#1}
+%\begin{mybox}{My title}
+%\lipsum[2]
+%\end{mybox}
+%========================================================================================================
+%======================================================== style 4 =======================================
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\arabic{enumii}.\theenumi.}
+%=======================================================================================================
+\begin{document}
+\pagestyle{fancy}
+%Exercice 1
+\begin{exercice}{}/
+					\begin{flushright}
+					نعتبر الأبعاد التالية :
+					\begin{itemize}
+\begin{minipage}[c]{0.49\linewidth}
+\indent
+\vspace{-0.5cm}
+					\item المسافة بین الأرض والقمر
+					$380\ 000\ km$
+					\item شعاع ذرة الهیدروجین
+					$1,05.10^{-10}\ m$
+					\item ارتفاع جبل توبقال
+					$4165\ m$
+					\item قطر جزیئة
+					$2\ nm$
+					\item شعاع الأرض
+					$6\ 400\ km$ 
+					\item قامة إنسان
+					$170\ cm$
+\end{minipage}
+\begin{minipage}[c]{0.49\linewidth}					
+					\item المسافة بین الأرض و الشمس
+					$150\ million\ de\ km$
+					\item شعاع نواة ذرة الھیدروجین
+					$10^{-15}\ m $
+					\item قطر مجرتنا
+					$9,5.10^{17}\ km $ 
+					\item قطر خلیة
+					$10\ \mu m $
+					\item شعاع الشمس
+					$700\ 000\ km $ 
+					\item القطر التقریبي للكون
+					$12.10^{22}\ km $ 
+\end{minipage}
+					\end{itemize}
+					\begin{enumerate}
+					\item حول الى الوحدة العالمية إن كان ممكنا.
+					\item أكتب هذه المقادر كتابة علمية.
+					\item استنتج رتب القدر.
+					\item مثل  هذه المسافات على محور سلم المسافات.
+					\end{enumerate}
+					\end{flushright}
+					\end{exercice}%=== source ===%
+\end{document}
