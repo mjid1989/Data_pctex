@@ -36,7 +36,7 @@
 \setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
 \setotherlanguage{french}
 \usepackage{fontspec}
-\fontspec [Path= /Users/mjid/Documents/maketex/Lycee/Exercices/Tc/fonts/,
+\fontspec [Path= ./fonts/,
 	UprightFont = *,
     ItalicFont = *bi
  ]
