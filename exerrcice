@@ -37,7 +37,7 @@
 \setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
 \setotherlanguage{french}
 \usepackage{fontspec}
-%\fontspec [Path= https://github.com/mjid1989/test/tree/master/fonts/,
+%\fontspec [Path= fonts/,
 %	UprightFont = *,
 %   ItalicFont = *bi
 % ]
