@@ -35,16 +35,16 @@
 %\renewcommand{\figurename}{Fig.}
 \setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
 \setotherlanguage{french}
-%\fontspec [Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/public/lm/,
-%	UprightFont = lmsans10-Regular.otf,
-%    BoldFont = OpenSans-Bold.otf,
-%    ItalicFont = lmsans10-Italic.otf
-% ]
-%{lmsans10-regular.otf}
+\usepackage{fontspec}
+\fontspec [Path= /Users/mjid/Documents/maketex/Lycee/Exercices/Tc/fonts/,
+	UprightFont = *,
+    ItalicFont = *bi
+ ]
+{arial}
 
 %\setmainfont[Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/%public/lm/]{lmsans10-regular.otf}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
-\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{arial.ttf}
+%\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arial}
 %\newfontfamily\arabicfont[Script=Arabic,Scale=1]{/Users/mjid/Documents/maketex/arial1/arial.ttf}
 %\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arialbd.ttf}
 \author{نايت الياس}
@@ -100,7 +100,7 @@ title={#2},#1}
 \vspace{-0.5cm}
 					\item المسافة بین الأرض والقمر
 					$380\ 000\ km$
-					\item شعاع ذرة الهیدروجین
+					\item شعاع ذرة الھیدروجین
 					$1,05.10^{-10}\ m$
 					\item ارتفاع جبل توبقال
 					$4165\ m$
