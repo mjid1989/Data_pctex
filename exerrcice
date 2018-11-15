@@ -44,10 +44,10 @@
 %{arial}
 
 %\setmainfont[Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/%public/lm/]{lmsans10-regular.otf}
-%\newfontfamily\arabicfont[Script=Arabic,Scale=1]{arial.ttf}
-%\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arial.ttf}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
-\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{arial.ttf}
+\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arial.ttf}
+%\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
+%\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
 %\newfontfamily\arabicfont[Script=Arabic,Scale=1]{/Users/mjid/Documents/maketex/arial1/arial.ttf}
 %\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arialbd.ttf}
 \author{نايت الياس}
