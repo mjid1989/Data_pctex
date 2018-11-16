@@ -1,26 +1,149 @@
+\documentclass[12pt,a4paper]{article} %,landscape,twocolumn
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{etex}
+\usepackage{circuitikz}
+\usetikzlibrary {circuits.ee.IEC}
+\usepackage{pgf}
+\usepackage{bm}
+\usepackage{pstricks}
+\let\clipbox\relax
+\usepackage{caption}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{lastpage}
+\usepackage{setspace}
+\usepackage{graphicx} %table
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,includehead]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text}
+%\usepackage{xunicode}
+%\usepackage{xltxtra}
+%\setmainfont{???}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{titlesec}
+\usepackage{varwidth}
+\usepackage{fancyhdr} % Mise en page, en-tête et pied de page
+\usepackage[a4,frame,center]{crop}
+%\renewcommand{\figurename}{Fig.}
+\setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
+\setotherlanguage{french}
+\usepackage{fontspec}
+\usepackage{fontenc}
+\setsansfont[
+BoldFont=arialbd.ttf,
+ItalicFont=ariali.ttf,
+BoldItalicFont=arialbi.ttf
+]{arial.ttf}
+%\fontspec [Path= ./fonts/,
+%	UprightFont = *,
+%   ItalicFont = *bi
+% ]
+%{arial}
 
+% Font styles and settings
+\setmainfont[Ligatures=TeX]{Amiri}
+\setsansfont[Ligatures=TeX,Script=Arabic,Scale=1.5]{Amiri}
+\setmonofont{Courier New}
+\newfontfamily\arabicfont[Script=Arabic,Ligatures=TeX]{Amiri}
 
-\documentclass[11pt,a4paper]{report}
-\usepackage{arabtex}
-\usepackage[utf8]{inputenc}
-\usepackage[LFE,LAE]{fontenc}
-\usepackage[arabic]{babel}
-\title{
-    \Huge\textsc{اللغة العربية}
+% set numerals=maghrib so page numbers are displayed in Arabic instead of
+% eastern Arabic numerals. Otherwise, remove it for eastern Arabic numerals.
+\setmainlanguage[numerals=maghrib]{arabic}
+\setotherlanguage{english}
+\newtcbtheorem[auto counter]{exercice}%
+		{\textbf{تمرين}}{enhanced jigsaw,breakable,fonttitle=\bfseries\upshape,
+			arc=0mm, colback=white!5!white,colframe=blue!50!white}{theorem}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\pagestyle{fancy}
+\rfoot{\textsl{\footnotesize{Année \number\count1/\number\count2}}}
+\lfoot{السنة الدراسية : }
+\cfoot{\footnotesize{صفحة 
+\pageref{LastPage}/\thepage}}
+\lhead{\footnotesize{ذ.}}
+\chead{
+سلسلة التمارين
 }
-\author{سالم البوزيدي} 
-\begin{document}
-\maketitle
-\tableofcontents
-\chapter{علوم الحاسوب}
-\section{تاريخ}
-\begin{otherlanguage}{arabic}
-يعود تاريخ علوم الحاسوب إلى اختراع أول حاسوب رقمي حديث. فقبل العشرينات من القرن العشرين، كان مصطلح حاسوب \textLR{Computer} يشير إلى أي أداة بشرية تقوم بعملية الحسابات. ما هي القضايا أو الأشياء التي يمكن لآلة أن تحسبها باتباع قائمة من التعليمات مع ورقة وقلم، دون تحديد للزمن اللازم ودون أي مهارات أو بصيرة (ذكاء)؟ وكان أحد دوافع هذه الدراسات هو تطوير آلات حاسبة \textLR{computing machines} يمكنها إتمام الأعمال الروتينية والعرضة للخطأ البشري عند إجراء حسابات بشرية.
-خلال الأربعينات، مع تطوير آلات حاسبة أكثر قوة وقدرة حسابية، تتطور مصطلح حاسوب ليشير إلى الآلات بدلا من الأشخاص الذين يقومون بالحسابات. وأصبح من الواضح أن الحواسيب يمكنها أن تقوم بأكثر من مجرد عمليات حسابية وبالتالي انتقلوا لدراسة تحسيب أو التحسيب بشكل عام. بدأت المعلوماتية وعلوم الحاسب تأخذ استقلالها كفرع أكاديمي مستقل في الستينات، مع إيجاد أوائل أقسام علوم الحاسب في الجامعات وبدأت الجامعات تعطي إجازات في هذه العلوم [1]. 
-\end{otherlanguage}
-\begin{thebibliography}{99}
-   [1]
-       من ويكيبيديا، الموسوعة الحرة
-       \end{thebibliography}
-       \end{document}
+\definecolor{color1}{RGB}{250,250,190}
+\pagecolor{color1}
 
+\newtcolorbox[blend into=figures]{myfigure}[2][]{float=htb,capture=hbox,
+title={#2},every float=\centering,#1}
+%================================================style 3 =============================================
+% \usepackage{varwidth}
+\newtcolorbox[auto counter]{mybox}[2][]{enhanced,
+attach boxed title to top right={xshift=-1cm,yshift=-3mm},
+fonttitle=\bfseries,varwidth boxed title=0.7\linewidth,
+colbacktitle=green!45!white,coltitle=green!10!black,colframe=green!50!black,
+interior style={top color=yellow!10!white,bottom color=green!10!white},
+boxed title style={boxrule=0.75mm,colframe=white,
+borderline={0.1mm}{0mm}{green!50!black},
+borderline={0.1mm}{0.75mm}{green!50!black},
+interior style={top color=green!10!white,bottom color=green!10!white,
+middle color=green!50!white},
+drop fuzzy shadow},
+title={#2},#1}
+%\begin{mybox}{My title}
+%\lipsum[2]
+%\end{mybox}
+%========================================================================================================
+%======================================================== style 4 =======================================
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\arabic{enumii}.\theenumi.}
+%=======================================================================================================
+\begin{document}
+\pagestyle{fancy}
+%Exercice 1
+\begin{exercice}{}/
+					\begin{flushright}
+					نعتبر الأبعاد التالية :
+					\begin{itemize}
+\begin{minipage}[c]{0.49\linewidth}
+\indent
+\vspace{-0.5cm}
+					\item المسافة بین الأرض والقمر
+					$380\ 000\ km$
+					\item شعاع ذرة الھیدروجین
+					$1,05.10^{-10}\ m$
+					\item ارتفاع جبل توبقال
+					$4165\ m$
+					\item قطر جزیئة
+					$2\ nm$
+					\item شعاع الأرض
+					$6\ 400\ km$ 
+					\item قامة إنسان
+					$170\ cm$
+\end{minipage}
+\begin{minipage}[c]{0.49\linewidth}					
+					\item المسافة بین الأرض و الشمس
+					$150\ million\ de\ km$
+					\item شعاع نواة ذرة الھیدروجین
+					$10^{-15}\ m $
+					\item قطر مجرتنا
+					$9,5.10^{17}\ km $ 
+					\item قطر خلیة
+					$10\ \mu m $
+					\item شعاع الشمس
+					$700\ 000\ km $ 
+					\item القطر التقریبي للكون
+					$12.10^{22}\ km $ 
+\end{minipage}
+					\end{itemize}
+					\begin{enumerate}
+					\item حول الى الوحدة العالمية إن كان ممكنا.
+					\item أكتب هذه المقادر كتابة علمية.
+					\item استنتج رتب القدر.
+					\item مثل  هذه المسافات على محور سلم المسافات.
+					\end{enumerate}
+					\end{flushright}
+					\end{exercice}%=== source ===%
+\end{document}
