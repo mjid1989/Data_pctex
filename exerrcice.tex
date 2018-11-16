@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article} %,landscape,twocolumn
+\documentclass[12pt,a4paper,twocolumn]{article} %,landscape,twocolumn
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -34,21 +34,11 @@
 \usepackage{varwidth}
 \usepackage{fancyhdr} % Mise en page, en-tête et pied de page
 \usepackage[a4,frame,center]{crop}
-%\fontspec [Path= ./fonts/,
-%	UprightFont = *,
-%   ItalicFont = *bi
-% ]
-%{arial}
-
-% Font styles and settings
 \setmainfont[Ligatures=TeX]{Amiri}
 \setsansfont[Ligatures=TeX,Script=Arabic,Scale=1.5]{Amiri}
 \newfontfamily\arabicfont[Script=Arabic,Ligatures=TeX]{Amiri}
-
-% set numerals=maghrib so page numbers are displayed in Arabic instead of
-% eastern Arabic numerals. Otherwise, remove it for eastern Arabic numerals.
 \setmainlanguage[numerals=maghrib]{arabic}
-\setotherlanguage{english}
+\setotherlanguage{french}
 \newtcbtheorem[auto counter]{exercice}%
 		{\textbf{تمرين}}{enhanced jigsaw,breakable,fonttitle=\bfseries\upshape,
 			arc=0mm, colback=white!5!white,colframe=blue!50!white}{theorem}
@@ -137,7 +127,7 @@ title={#2},#1}
 					\end{exercice}%=== source ===%
 					%Exercice 2
 \begin{exercice}{}/
-					\begin{minipage}[c]{0.55\linewidth}
+\begin{minipage}[c]{0.55\linewidth}
 					باعتمادك على الوثيقة التالية :
 					\begin{enumerate}
 					\item إعط مميزات القوة التي تسلطها الأرض على القمر.
