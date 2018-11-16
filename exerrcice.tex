@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{etex}
 \usepackage{circuitikz}
 \usetikzlibrary {circuits.ee.IEC}
 \usepackage{pgf}
@@ -37,15 +38,20 @@
 \setdefaultlanguage[calendar=gregorian,numerals=maghrib]{arabic}
 \setotherlanguage{french}
 \usepackage{fontspec}
-\fontspec [Path= ./fonts/,
-	UprightFont = *,
-   ItalicFont = *bi
- ]
-{arial}
+\setsansfont[
+BoldFont=arialbd.ttf,
+ItalicFont=ariali.ttf,
+BoldItalicFont=arialbi.ttf
+]{arial.ttf}
+%\fontspec [Path= ./fonts/,
+%	UprightFont = *,
+%   ItalicFont = *bi
+% ]
+%{arial}
 
 %\setmainfont[Path=/nix/store/2hk1ji0yvszs6nzmx4vk6l7kgqxy3gdn-lm-2.004/fonts/opentype/%public/lm/]{lmsans10-regular.otf}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{arial}
-\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{arial}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
+\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
 %\newfontfamily\arabicfont[Script=Arabic,Scale=1]{Arial}
 %\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{Arial}
 %\newfontfamily\arabicfont[Script=Arabic,Scale=1]{/Users/mjid/Documents/maketex/arial1/arial.ttf}
