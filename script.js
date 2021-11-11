@@ -1,3 +1,4 @@
+console.trace("test");
 runlatex.editorlines=25;
 runlatex.adddefaultpreamble=true;
 runlatex.adddefaultengine=true;
