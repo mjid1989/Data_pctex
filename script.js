@@ -1,4 +1,3 @@
-<script>
 runlatex.editorlines=25;
 runlatex.adddefaultpreamble=true;
 runlatex.adddefaultengine=true;
@@ -59,4 +58,3 @@ enonce += txt;
  editors["pre0"].setValue("%!TEX xelatex" + enonce);
  editors["pre0"].insert(editors["pre0"].getValue());
   }
-</script>
