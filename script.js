@@ -1,4 +1,4 @@
-alert("I am an alert box!");
+alert("test");
 runlatex.editorlines=25;
 runlatex.adddefaultpreamble=true;
 runlatex.adddefaultengine=true;
